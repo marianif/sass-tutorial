@@ -1,0 +1,35 @@
+// We can split styles in different .scss files to keep code cleaner
+@import "./variables";
+
+// Mixing
+@mixin flexCenter($direction, $bgColor) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  background-color: $bgColor;
+}
+
+header {
+  @include flexCenter(column, $secondaryColor);
+
+  width: 90vw;
+
+  padding: 5vw;
+
+  h1 {
+    color: $headingColor;
+  }
+
+  button {
+    background: $primaryColor;
+
+    // & symbol to add focus, hover, after etc...
+    &:hover {
+      background: $secondaryColor;
+    }
+    &::after {
+      content: "->";
+    }
+  }
+}

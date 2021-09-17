@@ -1,0 +1,6 @@
+@import "./variables";
+@import "./header";
+
+.info {
+  @include flexCenter(column, red, white);
+}

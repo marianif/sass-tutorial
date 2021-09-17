@@ -1,0 +1,7 @@
+@import "./header";
+@import "./variables";
+
+footer {
+  @extend header;
+  color: azure;
+}
